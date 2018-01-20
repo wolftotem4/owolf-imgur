@@ -3,19 +3,13 @@
     "license": "MIT",
     "require": {
         "wolftotem4/oauth2-imgur": "^0.1.1",
-        "wolftotem4/owolf-laravel": "dev-master"
+        "wolftotem4/owolf-laravel": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
             "OWolf\\Imgur\\": "src/OWolf/Imgur/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wolftotem4/owolf-laravel.git"
-        }
-    ],
     "extra": {
         "laravel": {
             "providers": [
