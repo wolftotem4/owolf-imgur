@@ -3,7 +3,7 @@
     "license": "MIT",
     "require": {
         "wolftotem4/oauth2-imgur": "^0.1.1",
-        "wolftotem4/owolf-laravel": "^0.1.0"
+        "wolftotem4/owolf-laravel": "^0.1"
     },
     "autoload": {
         "psr-4": {

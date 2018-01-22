@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use OWolf\Credentials\AccessTokenCredentials;
 use OWolf\Credentials\ClientIdCredentials;
 use OWolf\Laravel\UserOAuthManager;
+use OWolf\Laravel\Util;
 use WTotem4\OAuth2\Client\Provider\Imgur;
 
 class ImgurCredentialsProvider extends ServiceProvider
@@ -16,9 +17,7 @@ class ImgurCredentialsProvider extends ServiceProvider
             $manager->addDriver('imgur.oauth', function ($name, $config) {
                 $oauth = array_get($config, 'oauth', []);
 
-                $oauth['redirectUri'] = isset($oauth['redirectUri'])
-                    ? value($oauth['redirectUri'])
-                    : route('oauth.callback', [$name]);
+                $oauth['redirectUri'] = Util::redirectUri(array_get($oauth, 'redirectUri'), $name);
 
                 $provider = new Imgur($oauth);
                 return new ImgurOAuthHandler($provider, $name, $config);
