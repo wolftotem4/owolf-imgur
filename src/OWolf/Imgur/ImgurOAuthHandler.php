@@ -18,7 +18,7 @@ class ImgurOAuthHandler extends ProviderHandler implements OAuthHandler
     public function getName(AccessToken $token)
     {
         $resourceOwner = $this->getResourceOwner($token);
-        return $resourceOwner->getBio();
+        return $resourceOwner->getUrl();
     }
 
     /**
