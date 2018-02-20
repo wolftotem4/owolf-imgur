@@ -1,5 +1,6 @@
 {
     "name": "wolftotem4/owolf-imgur",
+    "description": "Imgur Driver for OWolf-Laravel",
     "license": "MIT",
     "require": {
         "wolftotem4/oauth2-imgur": "^0.1.1",
